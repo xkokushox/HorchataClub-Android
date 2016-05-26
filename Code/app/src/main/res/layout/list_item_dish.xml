@@ -1,0 +1,123 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        card_view:cardBackgroundColor="@android:color/white"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardElevation="2sp"
+        card_view:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/img_item_dish"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                fresco:actualImageScaleType="focusCrop" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                android:weightSum="6">
+
+                <com.freakybyte.horchataclub.view.AutoFitTxtView
+                    android:id="@+id/txt_item_dish_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:maxLines="1"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center|left"
+                    android:text="Don Frank"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img_star_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_star_black" />
+
+                    <ImageView
+                        android:id="@+id/img_star_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_star_black" />
+
+                    <ImageView
+                        android:id="@+id/img_star_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_star_black" />
+
+                    <ImageView
+                        android:id="@+id/img_star_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_star_black" />
+
+                    <ImageView
+                        android:id="@+id/img_star_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_star_black" />
+
+
+                </LinearLayout>
+
+                <com.freakybyte.horchataclub.view.AutoFitTxtView
+                    android:id="@+id/txt_item_dish_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center|left"
+                    android:lines="1"
+                    android:text="Frank"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="17sp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary"></FrameLayout>
+
+                <com.freakybyte.horchataclub.view.AutoFitTxtView
+                    android:id="@+id/txt_item_dish_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center|left"
+                    android:maxLines="2"
+                    android:text="Torres Adalid 1353 (Pitágoras), 03020 Benito Juárez, Federal District"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</FrameLayout>
